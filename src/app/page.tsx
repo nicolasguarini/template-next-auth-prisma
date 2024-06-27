@@ -1,6 +1,7 @@
+import { SignIn } from "@/components/sign-in-button";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center gap-24 p-24">
 
@@ -16,6 +17,8 @@ export default function Home() {
       </div>
 
       <h1 className="text-4xl font-bold">Template with Tailwind, TypeScript, Drizzle, and Auth.js.</h1>
+
+      <SignIn />
     </main>
   );
 }
