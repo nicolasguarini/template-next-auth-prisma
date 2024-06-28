@@ -1,3 +1,4 @@
+"use server";
 import prisma from "./db"
 
 // Documentation: https://www.prisma.io/docs/orm/prisma-client/queries
