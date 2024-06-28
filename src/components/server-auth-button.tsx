@@ -8,19 +8,18 @@ export async function AuthButton() {
       "use server"
       await signIn()
     }}>
-      <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign in</button>
+      <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign in (server-side)</button>
     </form>
   ) 
   
   return (
     <div className="flex flex-col items-center justify-center gap-4">
-      <div className="font-bold text-2xl">Server-Side Authentication Button</div>
       <div>Signed in: {session.user.email}</div>
       <form action={async () => {
         "use server"
         await signOut()
       }}>
-        <button type="submit" className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Sign out</button>
+        <button type="submit" className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Sign out (server-side)</button>
       </form>
     </div>
   )
