@@ -1,4 +1,4 @@
-import { AuthButton } from "@/components/auth-button";
+import { AuthButton } from "@/components/server-auth-button";
 import Image from "next/image";
 
 export default async function Home() {
@@ -16,7 +16,7 @@ export default async function Home() {
         />
       </div>
 
-      <h1 className="text-4xl font-bold">Template with Tailwind, TypeScript, Drizzle, and Auth.js.</h1>
+      <h1 className="text-4xl font-bold">Template with Tailwind, TypeScript, Prisma, and Auth.js.</h1>
 
       <AuthButton />
     </main>

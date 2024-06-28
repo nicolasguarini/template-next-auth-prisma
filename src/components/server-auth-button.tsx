@@ -14,6 +14,7 @@ export async function AuthButton() {
   
   return (
     <div className="flex flex-col items-center justify-center gap-4">
+      <div className="font-bold text-2xl">Server-Side Authentication Button</div>
       <div>Signed in: {session.user.email}</div>
       <form action={async () => {
         "use server"
