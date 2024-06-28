@@ -1,7 +1,10 @@
 import { AuthButton } from "@/components/server-auth-button";
+import { getAllUsers } from "@/server/userQueries";
 import Image from "next/image";
 
 export default async function Home() {
+  const users = await getAllUsers()
+
   return (
     <main className="flex min-h-screen flex-col items-center gap-20 p-24">
 
@@ -19,6 +22,18 @@ export default async function Home() {
       <h1 className="text-4xl font-bold">Template with Tailwind, TypeScript, Prisma, and Auth.js.</h1>
 
       <AuthButton />
+
+      <div>
+        <h2 className="text-2xl font-bold py-2">GetAllUsers() Query</h2>
+
+        {users?.map((user) => (
+          <div key={user.id}>
+            <h2>{user.name} - {user.email}</h2>
+          </div>
+        ))}
+      </div>
+
+      
     </main>
   );
 }
