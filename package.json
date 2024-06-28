@@ -1,5 +1,5 @@
 {
-  "name": "template-next-auth-drizzle",
+  "name": "template-next-auth-prisma",
   "version": "0.1.0",
   "private": true,
   "scripts": {
